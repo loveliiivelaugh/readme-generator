@@ -11,12 +11,12 @@ import MarkdownCard from './components/MarkdownCard';
 import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-
 import './App.css';
 
 function App() {
   const [formNavSelector, toggleFormNavSelector] = React.useState("header");
+
+  const data = {};
 
   return (
     <React.Fragment>
@@ -35,9 +35,9 @@ function App() {
           {formNavSelector === "others" && <OthersForm />}
         </Col>
         <Col xs={6} md={6}>
-          <PreviewCard />
+          <PreviewCard data={data} />
 
-          <MarkdownCard />
+          <MarkdownCard data={data} />
         </Col>
       </Container>
 

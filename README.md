@@ -25,7 +25,9 @@ Check this out. ---> https://arturssmirnovs.github.io/github-profile-readme-gene
 
 `touch FormNav.js HeaderForm.js AdditionalForm.js SocialForm.js OthersForm.js PreviewCard.js MarkdownCard.js Footer.js`
 
-5. Build the components.
+5. Build the components. Using *react-hook-form* for the form components
+
+[react-hook-form](https://react-hook-form.com)
 
 6. Establish application state ... forms(s), formNavSelector
 
