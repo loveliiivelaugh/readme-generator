@@ -15,7 +15,8 @@ Check this out. ---> https://arturssmirnovs.github.io/github-profile-readme-gene
 
 1. From the start it looks like the styling comes from Bootstrap. So Ill start there...
 
-2. npm install react-bootstrap bootstrap
+2. `npm install react-bootstrap bootstrap`
+
 [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
 
 3. Create Header component using the Jumbotron component from Bootstrap.
