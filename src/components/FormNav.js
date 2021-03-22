@@ -1,27 +1,50 @@
-import { Nav } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
 
 const FormNav = ({ toggleFormNavSelector }) => {
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const button = e.target.id;
+
+    switch(button) {
+      case "header-button":
+        toggleFormNavSelector("header");
+        break;
+      case "additional-button":
+        toggleFormNavSelector("additional");
+        break;
+      case "social-button":
+        toggleFormNavSelector("social");
+        break;
+      case "others-button":
+        toggleFormNavSelector("others");
+        break;
+      default:
+        toggleFormNavSelector("header");
+    }
+  };
+
   return (
-    <Nav variant="pills" activeKey="1" onSelect={toggleFormNavSelector}>
+    <Nav variant="pills">
       <Nav.Item>
-        <Nav.Link eventKey="1" href="#/home">
-          NavLink 1 content
-        </Nav.Link>
+        <Button id="header-button" onClick={handleClick}>
+          Header
+        </Button>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="2" title="Item">
-          NavLink 2 content
-        </Nav.Link>
+        <Button id="additional-button" onClick={handleClick}>
+          Additional
+        </Button>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="3" disabled>
-          NavLink 3 content
-        </Nav.Link>
+        <Button id="social-button" onClick={handleClick}>
+          Social
+        </Button>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="4" disabled>
-          NavLink 4 content
-        </Nav.Link>
+        <Button id="others-button" onClick={handleClick}>
+          Others
+        </Button>
       </Nav.Item>
     </Nav>
   )

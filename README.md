@@ -11,7 +11,7 @@ Live site coming soon
 
 Check this out. ---> https://arturssmirnovs.github.io/github-profile-readme-generator/
 
-## Notes ( while building.. )
+### Notes ( while building.. )
 
 1. From the start it looks like the styling comes from Bootstrap. So Ill start there...
 
