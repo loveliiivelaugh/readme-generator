@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header';
+import InstructionsBox from './components/InstructionsBox';
+import FormNav from './components/FormNav';
+import HeaderForm from './components/HeaderForm';
+import AdditionalForm from './components/AdditionalForm';
+import SocialForm from './components/SocialForm';
+import OthersForm from './components/OthersForm';
+import PreviewCard from './components/PreviewCard';
+import MarkdownCard from './components/MarkdownCard';
+import Footer from './components/Footer';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 import './App.css';
 
 function App() {
+  const [formNavSelector, toggleFormNavSelector] = React.useState("header");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+
+      <Header />
+
+      <Container>
+        <Col xs={6} md={6}>
+          <InstructionsBox />
+
+          <FormNav toggleFormNavSelector={toggleFormNavSelector} />
+
+          {formNavSelector === "header" && <HeaderForm />}
+          {formNavSelector === "additional" && <AdditionalForm />}
+          {formNavSelector === "social" && <SocialForm />}
+          {formNavSelector === "others" && <OthersForm />}
+        </Col>
+        <Col xs={6} md={6}>
+          <PreviewCard />
+
+          <MarkdownCard />
+        </Col>
+      </Container>
+
+      <Footer />
+
+    </React.Fragment>
   );
 }
 

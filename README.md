@@ -1,4 +1,40 @@
-# Getting Started with Create React App
+# README Generator
+
+This project is a small README generator. 
+## Summary
+
+## Deployment
+
+Live site coming soon
+
+## Inspiration
+
+Check this out. ---> https://arturssmirnovs.github.io/github-profile-readme-generator/
+
+## Notes ( while building.. )
+
+1. From the start it looks like the styling comes from Bootstrap. So Ill start there...
+
+2. npm install react-bootstrap bootstrap
+[Bootstrap](https://react-bootstrap.github.io/getting-started/introduction)
+
+3. Create Header component using the Jumbotron component from Bootstrap.
+
+4. Create components ... InstructionsBox, FormNav,
+
+`touch FormNav.js HeaderForm.js AdditionalForm.js SocialForm.js OthersForm.js PreviewCard.js MarkdownCard.js Footer.js`
+
+5. Build the components.
+
+6. Establish application state ... forms(s), formNavSelector
+
+7. `npm run build && netlify deploy --prod`
+
+8. set up continuous deployment
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
