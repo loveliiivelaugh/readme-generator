@@ -62,7 +62,8 @@ const HeaderForm = (props) => {
         <Form.Label>About Me</Form.Label>
         <Controller
             name="address"
-            type="textbox"
+            as="textarea"
+            type="text"
             control={control}
             defaultValue=""
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}

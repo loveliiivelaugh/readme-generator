@@ -1,12 +1,102 @@
-import { Form } from 'react-bootstrap';
+import { Col, Container, Form, Row } from 'react-bootstrap';
+import { useForm, Controller } from "react-hook-form";
 
 const AdditionalForm =(props) => {
+
+  const { control, register, handleSubmit, errors } = useForm();
+
   return (
-    <Form>
-      <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="name@example.com" />
-      </Form.Group>
+    <Container>
+      <Form>
+        <Row>
+          <Col>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+          </Col>
+
+          <Col>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Heading</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+          </Col>
+        </Row>
+        
+{/* 
       <Form.Group controlId="exampleForm.ControlSelect1">
         <Form.Label>Example select</Form.Label>
         <Form.Control as="select">
@@ -30,8 +120,11 @@ const AdditionalForm =(props) => {
       <Form.Group controlId="exampleForm.ControlTextarea1">
         <Form.Label>Example textarea</Form.Label>
         <Form.Control as="textarea" rows={3} />
-      </Form.Group>
-    </Form>
+      </Form.Group> 
+*/}
+
+      </Form>
+    </Container>
   )
 }
 
