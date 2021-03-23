@@ -1,58 +1,185 @@
-import { Button, Col, Form } from 'react-bootstrap';
+import { Container, Col, Form, Row } from 'react-bootstrap';
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
 
 const SocialForm =(props) => {
+
+  const { control, register, handleSubmit, errors } = useForm();
+
   return (
-    <Form>
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
+    <Container>
+      <Form>
+        <Row>
+          <Col>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Github</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Hashnode</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Facebook</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Twitter</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>CodeSandbox</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>YouTube</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+          </Col>
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Form.Row>
-
-      <Form.Group controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
-      </Form.Group>
-
-      <Form.Group controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
-      </Form.Group>
-
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Control as="select" defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Control>
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
-        </Form.Group>
-      </Form.Row>
-
-      <Form.Group id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+          <Col>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Dev.to</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>LinkedIn</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Instagram</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Codepen</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Stack Overflow</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+            <Form.Group controlId="formGridEmail">
+              <Form.Label>Reddit</Form.Label>
+              <Controller
+                name="email"
+                type="email"
+                control={control}
+                defaultValue=""
+                render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+                />
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Form.Group controlId="formGridEmail">
+            <Form.Label>Website</Form.Label>
+            <Controller
+              name="email"
+              type="email"
+              defaultValue="www.michaelwoodward.dev"
+              control={control}
+              defaultValue=""
+              render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+              />
+            </Form.Group>
+        </Row>
+        <Row>
+          <h4>Others</h4>
+        </Row>
+        <Row>
+          <Form.Group as={Col} controlId="formGridState">
+            <Form.Label>Icon</Form.Label>
+            <Controller
+              name="state"
+              control={control}
+              options={[
+                { value: "chocolate", label: "Chocolate" },
+                { value: "strawberry", label: "Strawberry" },
+                { value: "vanilla", label: "Vanilla" }
+              ]}
+              as={Select}
+            />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Link</Form.Label>
+            <Controller
+              name="email"
+              type="email"
+              defaultValue="www.michaelwoodward.dev"
+              control={control}
+              defaultValue=""
+              render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+            />
+          </Form.Group>
+        </Row>
     </Form>
+    </Container>
   )
 }
 

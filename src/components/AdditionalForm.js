@@ -11,7 +11,7 @@ const AdditionalForm =(props) => {
         <Row>
           <Col>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>I'm currently working on...</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -21,7 +21,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>I want to collaborate on...</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -31,7 +31,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>Ask me about...</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -41,7 +41,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>Pronouns:</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -54,7 +54,7 @@ const AdditionalForm =(props) => {
 
           <Col>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>I'm currently learning...</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -64,7 +64,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>I'm looking for help with...</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -74,7 +74,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>How to reach me:</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -84,7 +84,7 @@ const AdditionalForm =(props) => {
                 />
             </Form.Group>
             <Form.Group controlId="formGridEmail">
-              <Form.Label>Heading</Form.Label>
+              <Form.Label>Fun fact:</Form.Label>
               <Controller
                 name="email"
                 type="email"
@@ -95,7 +95,7 @@ const AdditionalForm =(props) => {
             </Form.Group>
           </Col>
         </Row>
-        
+
 {/* 
       <Form.Group controlId="exampleForm.ControlSelect1">
         <Form.Label>Example select</Form.Label>
