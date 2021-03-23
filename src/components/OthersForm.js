@@ -1,57 +1,270 @@
-import { Button, Col, Form } from 'react-bootstrap';
+import { Button, Col, Form, Row } from 'react-bootstrap';
+import { useForm, Controller } from "react-hook-form";
 
 const OthersForm =(props) => {
+
+  const { control, register, handleSubmit, errors } = useForm();
+
   return (
     <Form>
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Form.Row>
-
-      <Form.Group controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
+      <Form.Group controlId="formGridEmail">
+        <Form.Label>Github</Form.Label>
+        <Controller
+          name="email"
+          type="text"
+          defaultValue="Enter your username..."
+          rules={{ required: true }}
+          control={control}
+          defaultValue=""
+          render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+        />
+        <p>*Github username required.</p>
       </Form.Group>
 
-      <Form.Group controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
-      </Form.Group>
+      <h3>Statistics</h3>
+      <Row>
+        <Col>
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Show profile views" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
 
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Show GitHub Activity Graph" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Include private repositories" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+        </Col>
+
+        <Col>
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Show GitHub statistics" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Show most used languages" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+        </Col>
+      </Row>
+
+      <h3>Github Trophies</h3>
+      <Row>
+        <Form.Group id="formGridCheckbox">
+          <Controller
+            name="MyCheckbox"
+            control={control}
+            defaultValue={false}
+            rules={{ required: true }}
+            render={props =>
+              <Form.Check 
+              type="checkbox" 
+              label="Show Trophies" 
+              onChange={e => props.onChange(e.target.checked)}
+              checked={props.value}
+              />
+            } // props contains: onChange, onBlur and value
+          />
         </Form.Group>
+      </Row>
 
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Control as="select" defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Control>
+
+      <h3>Github Badges</h3>
+      <Row>
+        <Col>
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Arctic Contributor" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Stars Program" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="GitHub Pro" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+        </Col>
+
+        <Col>
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Developer Program" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+
+          <Form.Group id="formGridCheckbox">
+            <Controller
+              name="MyCheckbox"
+              control={control}
+              defaultValue={false}
+              rules={{ required: true }}
+              render={props =>
+                <Form.Check 
+                type="checkbox" 
+                label="Sponsor" 
+                onChange={e => props.onChange(e.target.checked)}
+                checked={props.value}
+                />
+              } // props contains: onChange, onBlur and value
+              />
+          </Form.Group>
+        </Col>
+      </Row>
+
+      <h3>Github Metrics</h3>
+      <Row>
+        <Form.Group id="formGridCheckbox">
+          <Controller
+            name="MyCheckbox"
+            control={control}
+            defaultValue={false}
+            rules={{ required: true }}
+            render={props =>
+              <Form.Check 
+              type="checkbox" 
+              label="Show GitHub metrics" 
+              onChange={e => props.onChange(e.target.checked)}
+              checked={props.value}
+              />
+            } // props contains: onChange, onBlur and value
+          />
         </Form.Group>
+      </Row>
 
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
+      <h3>Github Streak Stats</h3>
+      <Row>
+        <Form.Group id="formGridCheckbox">
+          <Controller
+            name="MyCheckbox"
+            control={control}
+            defaultValue={false}
+            rules={{ required: true }}
+            render={props =>
+              <Form.Check 
+              type="checkbox" 
+              label="Show GitHub Streak Stats" 
+              onChange={e => props.onChange(e.target.checked)}
+              checked={props.value}
+              />
+            } // props contains: onChange, onBlur and value
+          />
         </Form.Group>
-      </Form.Row>
+      </Row>
 
-      <Form.Group id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
     </Form>
   )
 }
