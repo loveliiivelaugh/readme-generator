@@ -1,8 +1,8 @@
 const Footer = (props) => {
   return (
-    <div>
-      <h1>I am a footer!</h1>
-    </div>
+      <center style={{backgroundColor: "lightGray"}}>
+        <p>Made with ::heart:: by <a href="#">@loveliiivelaugh</a></p>
+      </center>
   )
 }
 

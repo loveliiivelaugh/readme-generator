@@ -36,9 +36,8 @@ const HeaderForm = (props) => {
   
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
+        <Form.Group controlId="formGridEmail">
+          <Form.Label>Heading</Form.Label>
           <Controller
             name="email"
             type="email"
@@ -48,8 +47,8 @@ const HeaderForm = (props) => {
           />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
+        <Form.Group controlId="formGridPassword">
+          <Form.Label>Subtitle</Form.Label>
           <Controller
             name="password"
             type="password"
@@ -58,13 +57,12 @@ const HeaderForm = (props) => {
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
           />
         </Form.Group>
-      </Form.Row>
 
       <Form.Group controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
+        <Form.Label>About Me</Form.Label>
         <Controller
             name="address"
-            type="text"
+            type="textbox"
             control={control}
             defaultValue=""
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
@@ -72,7 +70,7 @@ const HeaderForm = (props) => {
       </Form.Group>
 
       <Form.Group controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
+        <Form.Label>Skills</Form.Label>
         <Controller
           name="address2"
           type="text"
@@ -82,9 +80,8 @@ const HeaderForm = (props) => {
         />
       </Form.Group>
 
-      <Form.Row>
         <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
+          <Form.Label>Banner URL</Form.Label>
           <Controller
             name="city"
             type="text"
@@ -93,7 +90,7 @@ const HeaderForm = (props) => {
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
           />
         </Form.Group>
-
+{/* 
         <Form.Group as={Col} controlId="formGridState">
           <Form.Label>State</Form.Label>
           <Controller
@@ -107,23 +104,7 @@ const HeaderForm = (props) => {
             as={Select}
           />
         </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Controller
-            name="zip"
-            type="number"
-            control={control}
-            defaultValue=""
-            render={({ onChange, value }) => <input onChange={onChange} value={value} />}
-          />
-        </Form.Group>
-      </Form.Row>
-
-      <Form.Group id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
+         */}
       <Button variant="primary" type="submit" disabled={pending}>
         {!pending && <span>Save</span>}
 

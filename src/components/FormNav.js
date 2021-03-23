@@ -27,22 +27,22 @@ const FormNav = ({ toggleFormNavSelector }) => {
   return (
     <Nav variant="pills">
       <Nav.Item>
-        <Button id="header-button" onClick={handleClick}>
+        <Button id="header-button" size="lg" variant="outline" onClick={handleClick}>
           Header
         </Button>
       </Nav.Item>
       <Nav.Item>
-        <Button id="additional-button" onClick={handleClick}>
+        <Button id="additional-button" size="lg" variant="outline"  onClick={handleClick}>
           Additional
         </Button>
       </Nav.Item>
       <Nav.Item>
-        <Button id="social-button" onClick={handleClick}>
+        <Button id="social-button" size="lg" variant="outline"  onClick={handleClick}>
           Social
         </Button>
       </Nav.Item>
       <Nav.Item>
-        <Button id="others-button" onClick={handleClick}>
+        <Button id="others-button" size="lg" variant="outline"  onClick={handleClick}>
           Others
         </Button>
       </Nav.Item>

@@ -11,6 +11,7 @@ import MarkdownCard from './components/MarkdownCard';
 import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import './App.css';
 
 function App() {
@@ -24,21 +25,23 @@ function App() {
       <Header />
 
       <Container>
-        <Col xs={6} md={6}>
-          <InstructionsBox />
+        <Row>
+          <Col xs={6} sm={6} md={6}>
+            <InstructionsBox />
 
-          <FormNav toggleFormNavSelector={toggleFormNavSelector} />
+            <FormNav toggleFormNavSelector={toggleFormNavSelector} />
 
-          {formNavSelector === "header" && <HeaderForm />}
-          {formNavSelector === "additional" && <AdditionalForm />}
-          {formNavSelector === "social" && <SocialForm />}
-          {formNavSelector === "others" && <OthersForm />}
-        </Col>
-        <Col xs={6} md={6}>
-          <PreviewCard data={data} />
+            {formNavSelector === "header" && <HeaderForm />}
+            {formNavSelector === "additional" && <AdditionalForm />}
+            {formNavSelector === "social" && <SocialForm />}
+            {formNavSelector === "others" && <OthersForm />}
+          </Col>
+          <Col xs={6} sm={6} md={6}>
+            <PreviewCard data={data} />
 
-          <MarkdownCard data={data} />
-        </Col>
+            <MarkdownCard data={data} />
+          </Col>
+        </Row>
       </Container>
 
       <Footer />
