@@ -67,7 +67,13 @@ Go the extra mile and write tests for your application. Then provide examples on
 
 ## Deployment
 
-Live site coming soon
+[Deploys with Netlify](https://www.netlify.com/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe8b5ed1-e5e3-4684-85ad-a84477155a45/deploy-status)](https://app.netlify.com/sites/react-readme-generator/deploys)
+
+~~Live site coming soon~~
+
+[Live Site](https://react-readme-generator.netlify.app/)
 ## Notes 
 ### ( while building.. )
 
