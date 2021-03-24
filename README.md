@@ -9,6 +9,15 @@ Provide a short description explaining the what, why, and how of your project. U
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 - What problem does it solve?
 - What did you learn?
+
+#### Motivation
+
+#### Why did I build?
+
+#### What problem does it solve?
+
+#### What did I learn?
+
 ## Table of Contents (Optional)
 If your README is long, add a table of contents to make it easy for users to find what they need.
 - [Installation](#installation)
@@ -34,6 +43,13 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 If you followed tutorials, include links to those here as well.
+
+[Professional README guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+
+#### Inspiration
+
+Check this out. ---> [arturssmirnovs/github-profile-readme-generator](https://github.com/arturssmirnovs/github-profile-readme-generator)
+
 ## License
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
 ---
@@ -51,19 +67,6 @@ Go the extra mile and write tests for your application. Then provide examples on
 ## Deployment
 
 Live site coming soon
-
-## Motivation
-
-## Inspiration
-
-Check this out. ---> [arturssmirnovs/github-profile-readme-generator](https://github.com/arturssmirnovs/github-profile-readme-generator)
-
-### Why did I build?
-
-### What problem does it solve?
-
-### What did I learn?
-
 ### Notes ( while building.. )
 
 1. From the start it looks like the styling comes from Bootstrap. So Ill start there...
@@ -89,7 +92,7 @@ Check this out. ---> [arturssmirnovs/github-profile-readme-generator](https://gi
 8. set up continuous deployment
 
 
-
+----------------------
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
