@@ -1,19 +1,26 @@
 import React from 'react';
-import { Button, Col, Form } from 'react-bootstrap';
+import { Button, Col, Form, TextField } from 'react-bootstrap';
 import { useForm, Controller } from "react-hook-form";
 import Select from "react-select";
 
-const HeaderForm = (props) => {
+const HeaderForm = ({ headerFormData, setHeaderFormData }) => {
   const [pending, setPending] = React.useState(false);
   const [formAlert, setFormAlert] = React.useState(null);
 
-  const { control, register, handleSubmit, errors } = useForm();
+  const { heading, subtitle, aboutMe, skills, bannerUrl } = headerFormData;
 
-  const onSubmit = (data) => {
+  //function to update form data state upon form change
+  const onChange = e => (
+    setHeaderFormData({ ...headerFormData, [e.target.name]: e.target.value })
+  );
+
+  const handleSubmit = (data) => {
     setPending(true);
+    console.info({
+      message: "Header form has submited!",
+      data: data
+  });
 
-    console.info(data);
-    props.setHeaderFormData(data);
     setPending(false);
     // const query = props.id
     //   ? updateItem(props.id, data)
@@ -36,84 +43,67 @@ const HeaderForm = (props) => {
   };
   
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
+    <Form onSubmit={e => {
+      e.preventDefault();
+      handleSubmit(headerFormData);
+    }}>
         <Form.Group controlId="formGridEmail">
           <Form.Label>Heading</Form.Label>
-          <Controller
-            name="heading"
+          <Form.Control 
+            label="Heading"
             type="text"
-            control={control}
-            defaultValue=""
-            render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+            placeholder="Name"
+            name="heading"
+            value={headerFormData ? heading : "Placeholder title"}
+            onChange={onChange}
           />
         </Form.Group>
 
         <Form.Group controlId="formGridPassword">
           <Form.Label>Subtitle</Form.Label>
-          <Controller
+          <Form.Control
             name="subtitle"
             type="text"
-            control={control}
-            defaultValue=""
-            render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+            placeholder="Need to add a default subtitle"
+            value={headerFormData ? subtitle : "default"}
+            onChange={onChange}
           />
         </Form.Group>
 
       <Form.Group controlId="formGridAddress1">
         <Form.Label>About Me</Form.Label>
-        <Controller
+        <Form.Control
             name="aboutMe"
             as="textarea"
             type="text"
-            control={control}
-            defaultValue=""
-            render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+            placeholder="Something about yourself..."
+            value={headerFormData ? aboutMe : "something about you"}
+            onChange={onChange}
           />
       </Form.Group>
 
       <Form.Group controlId="formGridAddress2">
         <Form.Label>Skills</Form.Label>
-        <Controller
+        <Form.Control
           name="skills"
           type="text"
-          control={control}
-          defaultValue=""
-          render={({ onChange, value }) => <input onChange={onChange} value={value} />}
+          placeholder="List your skills..."
+          value={headerFormData ? skills : "all my skills"}
+          onChange={onChange}
         />
       </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>Banner URL</Form.Label>
-          <Controller
-            name="bannerUrl"
-            type="url"
-            control={control}
-            defaultValue=""
-            render={({ onChange, value }) => <input onChange={onChange} value={value} />}
-          />
-        </Form.Group>
-{/* 
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Controller
-            name="state"
-            control={control}
-            options={[
-              { value: "chocolate", label: "Chocolate" },
-              { value: "strawberry", label: "Strawberry" },
-              { value: "vanilla", label: "Vanilla" }
-            ]}
-            as={Select}
-          />
-        </Form.Group>
-         */}
-      <Button variant="primary" type="submit" disabled={pending}>
-        {!pending && <span>Save</span>}
+      <Form.Group as={Col} controlId="formGridCity">
+        <Form.Label>Banner URL</Form.Label>
+        <Form.Control
+          name="bannerUrl"
+          type="url"
+          placeholder="Put a url of an image."
+          value={headerFormData ? bannerUrl : ""}
+          onChange={onChange}
+        />
+      </Form.Group>
 
-        {pending && "Loading..." }
-        
-        Submit
-      </Button>
     </Form>
   )
 }

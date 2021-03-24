@@ -9,17 +9,59 @@ import OthersForm from './components/OthersForm';
 import PreviewCard from './components/PreviewCard';
 import MarkdownCard from './components/MarkdownCard';
 import Footer from './components/Footer';
-import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import './App.css';
 
 function App() {
   const [formNavSelector, toggleFormNavSelector] = React.useState("header");
-  const [headerFormData, setHeaderFormData] = React.useState();
-  const [additionalFormData, setAdditionalFormData] = React.useState();
-  const [socialFormData, setSocialFormData] = React.useState();
-  const [othersFormData, setOthersFormData] = React.useState();
+  const [headerFormData, setHeaderFormData] = React.useState({
+    heading: '',
+    subtitle: '',
+    about: '',
+    skills: '',
+    bannerUrl: '',
+  });
+  const [additionalFormData, setAdditionalFormData] = React.useState({
+    workingOn: "",
+    collaborate: "",
+    aboutMe: "",
+    pronouns: "",
+    learning: "",
+    helpMe: "",
+    contact: "",
+    funFact: ""
+  });
+  const [socialFormData, setSocialFormData] = React.useState({
+    github: "",
+    hashnode: '',
+    facebook: '',
+    twitter: '',
+    codesandbox: '',
+    youtube: '',
+    devTo: '',
+    linkedIn: '',
+    codepen: '',
+    stackoverflow: '',
+    reddit: '',
+    website: ''
+  });
+  const [othersFormData, setOthersFormData] = React.useState({
+    username: "",
+    profileViews: true,
+    githubStats: true,
+    activityGraph: true,
+    languages: true,
+    privateRepos: true,
+    trophies: true,
+    proBadge: true,
+    starsBadge: true,
+    arcticBadge: true,
+    devProgramBadge: true,
+    sponsorBadge: true,
+    metrics: true,
+    streak: true
+  });
 
   const data = {
     headerFormData: headerFormData,
@@ -99,13 +141,33 @@ function App() {
 
             <FormNav toggleFormNavSelector={toggleFormNavSelector} />
 
-            {formNavSelector === "header" && <HeaderForm setHeaderFormData={setHeaderFormData} />}
+            {formNavSelector === "header" && 
+              <HeaderForm 
+                headerFormData={headerFormData} 
+                setHeaderFormData={setHeaderFormData} 
+              />
+            }
 
-            {formNavSelector === "additional" && <AdditionalForm setAdditionalFormData={setAdditionalFormData} />}
+            {formNavSelector === "additional" && 
+              <AdditionalForm 
+                additionalFormData={additionalFormData}
+                setAdditionalFormData={setAdditionalFormData} 
+              />
+            }
 
-            {formNavSelector === "social" && <SocialForm setSocialFormData={setSocialFormData} />}
+            {formNavSelector === "social" && 
+              <SocialForm 
+                socialFormData={socialFormData}
+                setSocialFormData={setSocialFormData} 
+              />
+            }
 
-            {formNavSelector === "others" && <OthersForm setOthersFormData={setOthersFormData} />}
+            {formNavSelector === "others" && 
+              <OthersForm 
+                othersFormData={othersFormData}
+                setOthersFormData={setOthersFormData} 
+              />
+            }
 
           </Col>
           <Col xs={6} sm={6} md={6}>

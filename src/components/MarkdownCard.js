@@ -2,7 +2,6 @@ import { Button, Card } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 
 const PreviewCard = (props) => {
-  console.info(props.data)
   
   const heading = props.data.headerFormData && props.data.headerFormData.heading;
   const headerData = props.data.headerFormData && props.data.headerFormData;
@@ -10,7 +9,6 @@ const PreviewCard = (props) => {
   const additionalData = props.data.additionalFormData && props.data.additionalFormData;
   const socialData = props.data.socialFormData && props.data.socialFormData;
   const othersData = props.data.othersFormData && props.data.othersFormData;
-  console.info(skills)
 
   const markdown = `
     
