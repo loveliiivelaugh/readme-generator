@@ -73,7 +73,7 @@ const HeaderForm = ({ headerFormData, setHeaderFormData }) => {
       <Form.Group controlId="formGridAddress1">
         <Form.Label>About Me</Form.Label>
         <Form.Control
-            name="aboutMe"
+            name="about"
             as="textarea"
             type="text"
             placeholder="Something about yourself..."

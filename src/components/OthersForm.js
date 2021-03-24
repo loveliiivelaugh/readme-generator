@@ -108,21 +108,21 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
       <Row>
         <Col>
           <Form.Group>
-            <Form.Label id={profileViews}>Show profile views</Form.Label>
+            <Form.Label id="profileViews">Show profile views</Form.Label>
             <Form.Check type="checkbox" name="profileViews"
               onClick={e => handleCheckbox(e, profileViews)}
             />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label id={githubStats}>Show GitHub statistics</Form.Label>
+            <Form.Label id="githubStats">Show GitHub statistics</Form.Label>
             <Form.Check type="checkbox" name="githubStats"
               onClick={e => handleCheckbox(e, githubStats)}
             />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label id={activityGraph}>Show GitHub Activity Graph</Form.Label>
+            <Form.Label id="activityGraph">Show GitHub Activity Graph</Form.Label>
             <Form.Check type="checkbox" name="activityGraph"
               onClick={e => handleCheckbox(e, activityGraph)}
             />
@@ -131,14 +131,14 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
 
         <Col>
           <Form.Group>
-            <Form.Label id={languages}>Show most used languages</Form.Label>
+            <Form.Label id="languages">Show most used languages</Form.Label>
             <Form.Check type="checkbox" name="languages"
               onClick={e => handleCheckbox(e, languages)}
             />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label id={privateRepos} disabled={true}>Include private repositories</Form.Label>
+            <Form.Label id="privateRepos" disabled={true}>Include private repositories</Form.Label>
             <Form.Check type="checkbox" name="privateRepos"
               onClick={e => handleCheckbox(e, privateRepos)}
             />
@@ -150,7 +150,7 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
       <Row>
         <Col>
           <Form.Group>
-            <Form.Label id={trophies}>Show Trophies</Form.Label>
+            <Form.Label id="trophies">Show Trophies</Form.Label>
             <Form.Check type="checkbox" name="trophies"
               onClick={e => handleCheckbox(e, trophies)}
             />
@@ -163,20 +163,20 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
       <Row>
         <Col>
           <Form.Group>
-            <Form.Label id={arcticBadge}>Arctic Contributor</Form.Label>
+            <Form.Label id="arcticBadge">Arctic Contributor</Form.Label>
             <Form.Check type="checkbox" name="arcticBadge"
               onClick={e => handleCheckbox(e, arcticBadge)}
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label id={devProgramBadge}>Developer Program</Form.Label>
+            <Form.Label id="devProgramBadge">Developer Program</Form.Label>
             <Form.Check type="checkbox" name="devProgramBadge"
               onClick={e => handleCheckbox(e, devProgramBadge)}
             />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label id={starsBadge}>Stars Program</Form.Label>
+            <Form.Label id="starsBadge">Stars Program</Form.Label>
             <Form.Check type="checkbox" name="starsBadge"
               onClick={e => handleCheckbox(e, starsBadge)}
             />
@@ -185,14 +185,14 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
 
         <Col>
           <Form.Group>
-            <Form.Label id={sponsorBadge}>Sponsor</Form.Label>
+            <Form.Label id="sponsorBadge">Sponsor</Form.Label>
             <Form.Check type="checkbox" name="sponsorBadge"
               onClick={e => handleCheckbox(e, sponsorBadge)}
             />
           </Form.Group>
 
           <Form.Group>
-            <Form.Label id={proBadge}>GitHub Pro</Form.Label>
+            <Form.Label id="proBadge">GitHub Pro</Form.Label>
             <Form.Check type="checkbox" name="proBadge"
               onClick={e => handleCheckbox(e, proBadge)}
             />
@@ -204,7 +204,7 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
       <Row>
         <Col>
           <Form.Group>
-            <Form.Label id={metrics}>Show GitHub metrics</Form.Label>
+            <Form.Label id="metrics">Show GitHub metrics</Form.Label>
             <Form.Check type="checkbox" name="metrics"
               onClick={e => handleCheckbox(e, metrics)}
             />
@@ -216,7 +216,7 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
       <Row>
         <Col>
           <Form.Group>
-            <Form.Label id={streak}>Show GitHub Streak stats</Form.Label>
+            <Form.Label id="streak">Show GitHub Streak stats</Form.Label>
             <Form.Check type="checkbox" name="streak"
               onClick={e => handleCheckbox(e, streak)}
             />

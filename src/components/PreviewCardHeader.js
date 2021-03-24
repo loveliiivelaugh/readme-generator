@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 
 const PreviewCardHeader = ({ headerData }) => {
   const skills = headerData.skills.split(" ");
+
   return (
     <>
       <Card.Header>
@@ -13,8 +14,9 @@ const PreviewCardHeader = ({ headerData }) => {
           <Card.Text>
             {headerData && ' ' + headerData.about + ' ' || "Tell us some information about yourself..."}
           </Card.Text>
+          <Card.Subtitle as="h3">Skills:</Card.Subtitle>
           <Card.Text>
-            Skills: {skills && skills.map(skill => `${skill.toUpperCase()} / `)}
+            {skills && skills.map(skill => `${skill.toUpperCase()} / `)}
           </Card.Text>
       </Card.Body>
     </>

@@ -171,9 +171,9 @@ function App() {
 
           </Col>
           <Col xs={6} sm={6} md={6}>
-            <PreviewCard data={mockData} />
+            <PreviewCard data={data} />
 
-            <MarkdownCard data={mockData} />
+            <MarkdownCard data={data} />
           </Col>
         </Row>
 

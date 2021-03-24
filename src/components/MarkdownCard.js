@@ -12,9 +12,9 @@ const PreviewCard = (props) => {
 
   const markdown = `
     
-    ## ${heading ? heading : 'My shiny new project!'}
+    # ${heading ? heading : 'My shiny new project!'}
 
-    ### ${headerData && headerData.subtitle}
+    ### ${headerData ? headerData.subtitle : "A quick description."}
 
     ${headerData && headerData.about}
 
@@ -24,13 +24,11 @@ const PreviewCard = (props) => {
       skills.map(skill => ( `${skill.toUpperCase()} /` ))
     }
 
-    ${additionalData && (`
-      - 🔭 I'm currently working on ${additionalData.workingOn}
-      - 🌱 I'm currently learning ${additionalData.learning}
-      - 🤔 I'm looking for help with ${additionalData.helpMe}
-      - 💬 Ask me about ${additionalData.aboutMe}
-      - 📫 How to reach me: ${additionalData.contact}`
-    )}
+    ${additionalData.workingOn && (`- 🔭 I'm currently working on ${additionalData.workingOn}`)}
+    ${additionalData.learning && (`- 🌱 I'm currently learning ${additionalData.learning}`)}
+    ${additionalData.helpMe && (`- 🤔 I'm looking for help with ${additionalData.helpMe}`)}
+    ${additionalData.aboutMe && (`- 💬 Ask me about ${additionalData.aboutMe}`)}
+    ${additionalData.contact && (`- 📫 How to reach me: ${additionalData.contact}`)}
 
     ${socialData &&
       socialData.github &&
@@ -89,38 +87,38 @@ const PreviewCard = (props) => {
     }
     
     ${othersData && 
-      othersData.trophies.show &&
-      `[![trophy](https://github-profile-trophy.vercel.app/?username=${othersData.username})](https://github.com/ryo-ma/github-profile-trophy)`
+      !othersData.trophies ?
+      `[![trophy](https://github-profile-trophy.vercel.app/?username=${othersData.username})](https://github.com/ryo-ma/github-profile-trophy)` : ''
     }
 
     ${othersData && 
-      othersData.statistics.languages &&
-      `[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${othersData.username})](https://github.com/anuraghazra/github-readme-stats)`
+      !othersData.languages ?
+      `[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${othersData.username})](https://github.com/anuraghazra/github-readme-stats)` : ''
     }
 
     ${othersData && 
-      othersData.statistics.githubStats &&
-      `![GitHub stats](https://github-readme-stats.vercel.app/api?username=${othersData.username}&show_icons=true&count_private=true)`
+      !othersData.githubStats ?
+      `![GitHub stats](https://github-readme-stats.vercel.app/api?username=${othersData.username}&show_icons=true&count_private=true)` : ''
     }
     
     ${othersData && 
-      othersData.statistics.activityGraph &&
-      `![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=loveliiivelaugh)`
+      !othersData.activityGraph ?
+      `![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=loveliiivelaugh)` : ''
     }
     
     ${othersData && 
-      othersData.metrics.show &&
-      `![GitHub metrics](https://metrics.lecoq.io/${othersData.username}`
+      !othersData.metrics ?
+      `![GitHub metrics](https://metrics.lecoq.io/${othersData.username}` : ''
     }
 
     ${othersData && 
-      othersData.streak.show &&
-      `![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=${othersData.username}) `
+      !othersData.streak ?
+      `![GitHub streak stats](https://github-readme-streak-stats.herokuapp.com/?user=${othersData.username})` : ''
     }
 
     ${othersData && 
-      othersData.statistics.profileViews &&
-      `![Profile views](https://gpvc.arturio.dev/${othersData.username})`
+      !othersData.profileViews ?
+      `![Profile views](https://gpvc.arturio.dev/${othersData.username})` : ''
     }
 
   `;
