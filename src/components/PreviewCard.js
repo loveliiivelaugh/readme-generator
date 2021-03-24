@@ -146,34 +146,6 @@ const PreviewCard = (props) => {
       </>
       }
 
-      <ReactMarkdown>
-        # This is a header
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        ## Subtitle
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        ![Profile views](https://gpvc.arturio.dev/[loveliiivelaugh])
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        `<h1>What if I put tags in here?!</h1>`
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        - Does any of this work?!
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        1. Ordered list
-      </ReactMarkdown>
-
-      <ReactMarkdown>
-        [link](www.website.com)
-      </ReactMarkdown>
-      
       {othersData &&
       <>
 

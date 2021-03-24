@@ -60,7 +60,32 @@ function App() {
       reddit: '',
       website: 'michaelwoodward.dev'
     },
-    othersFormData: "",
+    othersFormData: {
+      username: "loveliivelaugh",
+      statistics: {
+        profileViews: true,
+        githubStats: true,
+        activityGraph: true,
+        languages: true,
+        privateRepos: false,
+      },
+      trophies: {
+        show: true,
+      },
+      badges: {
+        proBadge: true,
+        starsBadge: true,
+        arcticBadge: false,
+        devProgramBadge: false,
+        sponsorBadge: false,
+      },
+      metrics: {
+        show: true
+      },
+      streak: {
+        show: true
+      }
+    },
   }
 
   return (
