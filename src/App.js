@@ -70,66 +70,6 @@ function App() {
     othersFormData: othersFormData,
   };
 
-  const mockData = {
-    headerFormData: {
-      heading: "I am a shiny new project!",
-      subtitle: "Built with create-react-app",
-      about: "Changing the world one application at a time.",
-      skills: "JS HTML CSS React Python",
-      bannerUrl: ''
-    },
-    additionalFormData: {
-      workingOn: "Life",
-      collaborate: "everything and anything",
-      aboutMe: "my family",
-      pronouns: "He him",
-      learning: "web development",
-      helpMe: "securing a job",
-      contact: "web email phone linkedin github",
-      funFact: "Single parent"
-    },
-    socialFormData: {
-      github: "github.com/loveliiivelaugh",
-      hashnode: '',
-      facebook: '',
-      twitter: 'twitter.com/loveliiivelaugh',
-      codesandbox: '',
-      youtube: '',
-      devTo: '',
-      linkedIn: 'linkedin.com/to/michaelanthonywoodward',
-      codepen: '',
-      stackoverflow: '',
-      reddit: '',
-      website: 'michaelwoodward.dev'
-    },
-    othersFormData: {
-      username: "loveliivelaugh",
-      statistics: {
-        profileViews: true,
-        githubStats: true,
-        activityGraph: true,
-        languages: true,
-        privateRepos: false,
-      },
-      trophies: {
-        show: true,
-      },
-      badges: {
-        proBadge: true,
-        starsBadge: true,
-        arcticBadge: false,
-        devProgramBadge: false,
-        sponsorBadge: false,
-      },
-      metrics: {
-        show: true
-      },
-      streak: {
-        show: true
-      }
-    },
-  }
-
   return (
     <React.Fragment>
 
@@ -140,7 +80,7 @@ function App() {
             <InstructionsBox />
 
             <FormNav toggleFormNavSelector={toggleFormNavSelector} />
-
+            
             {formNavSelector === "header" && 
               <HeaderForm 
                 headerFormData={headerFormData} 
