@@ -1,23 +1,24 @@
 # README Generator
 
 This project is a small README generator. 
-
-# <Your-Project-Title>
 ## Description
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 - What was your motivation?
 - Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
 - What problem does it solve?
 - What did you learn?
-
 #### Motivation
 
+--
 #### Why did I build?
 
+--
 #### What problem does it solve?
 
+--
 #### What did I learn?
 
+--
 ## Table of Contents (Optional)
 If your README is long, add a table of contents to make it easy for users to find what they need.
 - [Installation](#installation)
@@ -67,7 +68,8 @@ Go the extra mile and write tests for your application. Then provide examples on
 ## Deployment
 
 Live site coming soon
-### Notes ( while building.. )
+## Notes 
+### ( while building.. )
 
 1. From the start it looks like the styling comes from Bootstrap. So Ill start there...
 
