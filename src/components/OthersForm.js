@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Col, Form, Row } from 'react-bootstrap';
-import { useForm } from "react-hook-form";
+import { Col, Form, Row } from 'react-bootstrap';
 
 const OthersForm = ({ othersFormData, setOthersFormData }) => {
   const [pending, setPending] = React.useState(false);
@@ -17,90 +16,92 @@ const OthersForm = ({ othersFormData, setOthersFormData }) => {
     setOthersFormData({ ...othersFormData, [e.target.name]: e.target.value })
   );
 
-  const handleSubmit = (data) => {
-    setPending(true);
-
-    console.info(data);
-
-    setPending(false);
-  };
-
   const handleCheckbox = (e, isTrue) => {
+    setPending(true);
     const name = e.target.name;
-    console.info(name, isTrue);
+
     switch (name) {
       case "profileViews":
         if (!isTrue) { setOthersFormData({ ...othersFormData, profileViews: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, profileViews: false }); }
+        setPending(false);
         break;
       case "githubStats":
         if (!isTrue) { setOthersFormData({ ...othersFormData, githubStats: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, githubStats: false }); }
+        setPending(false);
         break;
       case "activityGraph":
         if (!isTrue) { setOthersFormData({ ...othersFormData, activityGraph: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, activityGraph: false }); }
+        setPending(false);
         break;
       case "languages":
         if (!isTrue) { setOthersFormData({ ...othersFormData, languages: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, languages: false }); }
+        setPending(false);
         break;
       case "privateRepos":
         if (!isTrue) { setOthersFormData({ ...othersFormData, privateRepos: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, privateRepos: false }); }
+        setPending(false);
         break;
       case "trophies":
         if (!isTrue) { setOthersFormData({ ...othersFormData, trophies: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, trophies: false }); }
+        setPending(false);
         break;
       case "proBadge":
         if (!isTrue) { setOthersFormData({ ...othersFormData, proBadge: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, proBadge: false }); }
+        setPending(false);
         break;
       case "starsBadge":
         if (!isTrue) { setOthersFormData({ ...othersFormData, starsBadge: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, starsBadge: false }); }
+        setPending(false);
         break;
       case "arcticBadge":
         if (!isTrue) { setOthersFormData({ ...othersFormData, arcticBadge: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, arcticBadge: false }); }
+        setPending(false);
         break;
       case "devProgramBadge":
         if (!isTrue) { setOthersFormData({ ...othersFormData, devProgramBadge: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, devProgramBadge: false }); }
+        setPending(false);
         break;
       case "sponsorBadge":
         if (!isTrue) { setOthersFormData({ ...othersFormData, sponsorBadge: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, sponsorBadge: false }); }
+        setPending(false);
         break;
       case "metrics":
         if (!isTrue) { setOthersFormData({ ...othersFormData, metrics: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, metrics: false }); }
+        setPending(false);
         break;
       case "streak":
         if (!isTrue) { setOthersFormData({ ...othersFormData, streak: true }); }
         else if (isTrue) { setOthersFormData({ ...othersFormData, streak: false }); }
+        setPending(false);
         break;
     }
-    
   };
-  
-  console.info(othersFormData)
+
   return (
-    <Form onSubmit={e => {
-      e.preventDefault();
-      handleSubmit(othersFormData);
-    }}>
+    <Form>
       <Form.Group controlId="formGridEmail">
         <Form.Label>GitHub</Form.Label>
         <Form.Control
           name="username"
           type="text"
           defaultValue="Enter your username..."
-          value={username}
           rules={{ required: true }}
+          value={othersFormData ? username : "loveliiivelaugh"}
+          onChange={onChange}
         />
-        {/* <Form.Text>*Github username required.</Form.Text> */}
+        <Form.Text>*Github username required.</Form.Text>
       </Form.Group>
 
       <h3>Statistics</h3>
