@@ -25,6 +25,7 @@ const AdditionalForm =({ additionalFormData, setAdditionalFormData }) => {
       e.preventDefault();
       handleSubmit(additionalFormData);
     }}>
+      <h3>Additional Information</h3>
         <Row>
           <Col>
             <Form.Group controlId="formGridEmail">

@@ -47,6 +47,7 @@ const HeaderForm = ({ headerFormData, setHeaderFormData }) => {
       e.preventDefault();
       handleSubmit(headerFormData);
     }}>
+      <h3>Header</h3>
         <Form.Group controlId="formGridEmail">
           <Form.Label>Heading</Form.Label>
           <Form.Control 

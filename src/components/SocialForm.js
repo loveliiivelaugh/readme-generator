@@ -49,6 +49,7 @@ const SocialForm = ({ socialFormData, setSocialFormData }) => {
       e.preventDefault();
       handleSubmit(socialFormData);
     }}>
+      <h3>Social Information</h3>
         <Row>
           <Col>
             <Form.Group controlId="formGridEmail">

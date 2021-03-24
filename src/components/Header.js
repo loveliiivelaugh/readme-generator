@@ -3,10 +3,13 @@ import { Button, Jumbotron } from 'react-bootstrap';
 const Header = (props) => {
   return (
     <Jumbotron>
-      <h1>Hello, world!</h1>
+      <h1>GitHub Profile README Generator</h1>
       <p>
-        This is a simple hero unit, a simple jumbotron-style component for calling
-        extra attention to featured content or information.
+        Super simple GitHub profile Readme generator made with React.js, that allows you to create beautiful Readme files that you can copy/paste in your profile.
+      </p>
+      <hr />
+      <p>
+        What is a GitHub profile Readme? Check out the repository to learn more.
       </p>
       <p>
         <Button variant="primary">Learn more</Button>

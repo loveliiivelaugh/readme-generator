@@ -79,8 +79,9 @@ function App() {
           <Col xs={6} sm={6} md={6}>
             <InstructionsBox />
 
+            <p>Learn more:</p>
             <FormNav toggleFormNavSelector={toggleFormNavSelector} />
-            
+
             {formNavSelector === "header" && 
               <HeaderForm 
                 headerFormData={headerFormData} 
