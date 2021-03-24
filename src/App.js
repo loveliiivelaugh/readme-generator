@@ -16,33 +16,79 @@ import './App.css';
 
 function App() {
   const [formNavSelector, toggleFormNavSelector] = React.useState("header");
+  const [headerFormData, setHeaderFormData] = React.useState();
+  const [additionalFormData, setAdditionalFormData] = React.useState();
+  const [socialFormData, setSocialFormData] = React.useState();
+  const [othersFormData, setOthersFormData] = React.useState();
 
-  const data = {};
+  const data = {
+    headerFormData: headerFormData,
+    additionalFormData: additionalFormData,
+    socialFormData: socialFormData,
+    othersFormData: othersFormData,
+  };
+
+  const mockData = {
+    headerFormData: {
+      heading: "I am a shiny new project!",
+      subtitle: "Built with create-react-app",
+      about: "Changing the world one application at a time.",
+      skills: "JS HTML CSS React Python",
+      bannerUrl: ''
+    },
+    additionalFormData: {
+      workingOn: "Life",
+      collaborate: "everything and anything",
+      aboutMe: "my family",
+      pronouns: "He him",
+      learning: "web development",
+      helpMe: "securing a job",
+      contact: "web email phone linkedin github",
+      funFact: "Single parent"
+    },
+    socialFormData: {
+      github: "github.com/loveliiivelaugh",
+      hashnode: '',
+      facebook: '',
+      twitter: 'twitter.com/loveliiivelaugh',
+      codesandbox: '',
+      youtube: '',
+      devTo: '',
+      linkedIn: 'linkedin.com/to/michaelanthonywoodward',
+      codepen: '',
+      stackoverflow: '',
+      reddit: '',
+      website: 'michaelwoodward.dev'
+    },
+    othersFormData: "",
+  }
 
   return (
     <React.Fragment>
 
       <Header />
 
-      <Container>
         <Row>
           <Col xs={6} sm={6} md={6}>
             <InstructionsBox />
 
             <FormNav toggleFormNavSelector={toggleFormNavSelector} />
 
-            {formNavSelector === "header" && <HeaderForm />}
-            {formNavSelector === "additional" && <AdditionalForm />}
-            {formNavSelector === "social" && <SocialForm />}
-            {formNavSelector === "others" && <OthersForm />}
+            {formNavSelector === "header" && <HeaderForm setHeaderFormData={setHeaderFormData} />}
+
+            {formNavSelector === "additional" && <AdditionalForm setAdditionalFormData={setAdditionalFormData} />}
+
+            {formNavSelector === "social" && <SocialForm setSocialFormData={setSocialFormData} />}
+
+            {formNavSelector === "others" && <OthersForm setOthersFormData={setOthersFormData} />}
+
           </Col>
           <Col xs={6} sm={6} md={6}>
-            <PreviewCard data={data} />
+            <PreviewCard data={mockData} />
 
-            <MarkdownCard data={data} />
+            <MarkdownCard data={mockData} />
           </Col>
         </Row>
-      </Container>
 
       <Footer />
 

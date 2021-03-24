@@ -13,6 +13,7 @@ const HeaderForm = (props) => {
     setPending(true);
 
     console.info(data);
+    props.setHeaderFormData(data);
     setPending(false);
     // const query = props.id
     //   ? updateItem(props.id, data)
@@ -39,8 +40,8 @@ const HeaderForm = (props) => {
         <Form.Group controlId="formGridEmail">
           <Form.Label>Heading</Form.Label>
           <Controller
-            name="email"
-            type="email"
+            name="heading"
+            type="text"
             control={control}
             defaultValue=""
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
@@ -50,8 +51,8 @@ const HeaderForm = (props) => {
         <Form.Group controlId="formGridPassword">
           <Form.Label>Subtitle</Form.Label>
           <Controller
-            name="password"
-            type="password"
+            name="subtitle"
+            type="text"
             control={control}
             defaultValue=""
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
@@ -61,7 +62,7 @@ const HeaderForm = (props) => {
       <Form.Group controlId="formGridAddress1">
         <Form.Label>About Me</Form.Label>
         <Controller
-            name="address"
+            name="aboutMe"
             as="textarea"
             type="text"
             control={control}
@@ -73,7 +74,7 @@ const HeaderForm = (props) => {
       <Form.Group controlId="formGridAddress2">
         <Form.Label>Skills</Form.Label>
         <Controller
-          name="address2"
+          name="skills"
           type="text"
           control={control}
           defaultValue=""
@@ -84,8 +85,8 @@ const HeaderForm = (props) => {
         <Form.Group as={Col} controlId="formGridCity">
           <Form.Label>Banner URL</Form.Label>
           <Controller
-            name="city"
-            type="text"
+            name="bannerUrl"
+            type="url"
             control={control}
             defaultValue=""
             render={({ onChange, value }) => <input onChange={onChange} value={value} />}
