@@ -7,6 +7,8 @@ This project is a small README generator. It is used to help streamline the docu
 ## Screenshots
 
 ![Screenshot](/public/screenshot.png)
+
+## Credits
 #### Inspiration 🏆 
 
 Check this out. ---> [arturssmirnovs/github-profile-readme-generator](https://github.com/arturssmirnovs/github-profile-readme-generator)
